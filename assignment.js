@@ -1,4 +1,6 @@
-//kilometer to meter converter.
+// https://github.com/FaysalAhmmed177/Assignment3
+
+//1st Problem - Kilometer to meter converter.
 function kilometerToMeter(kilometer) {
 
     //Firstly,check if the number is negative one then return an error message
@@ -16,7 +18,7 @@ function kilometerToMeter(kilometer) {
 var result = kilometerToMeter(100);
 console.log(result);
 
-//budget calculator
+//2nd Problem - Budget calculator
 function budgetCalculator(watch, phone, laptop) {
 
     //Check if value is less than 0 then show an error message.
@@ -33,9 +35,13 @@ function budgetCalculator(watch, phone, laptop) {
 var cost = budgetCalculator(0, 2, 5);
 console.log(cost);
 
-//hotel Cost calculator
+//3rd Problem - Hotel Cost calculator
 function hotelCost(days){
 var cost = 0;
+if( days <0 ){
+    return "Negative days isn't possible.Please try with positive number."
+    }
+
 if( days <= 10 ){
 cost = days * 100;
 }
@@ -54,5 +60,21 @@ else{
 }
 return cost;
 }
-var hotel = hotelCost(28);
+var hotel = hotelCost(-1);
 console.log(hotel);
+
+//4th Problem - Find mega friend name
+function megaFriend(names){
+    var elementLength = names[0].length;
+    for(var i = 1; i<names.length; i++){
+        
+
+        if(elementLength < names[i].length){
+            elementLength = names[i].length;
+        }
+    }
+return elementLength;
+}
+var names = ["Anik","Mahmudul","Mushfiq","Sakib","Riyad","Robin"];
+var f = megaFriend(names);
+console.log(f);
