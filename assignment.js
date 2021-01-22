@@ -60,7 +60,7 @@ function hotelCost(days) {
     }
     return cost;
 }
-var hotel = hotelCost(-1);
+var hotel = hotelCost(22);
 console.log(hotel);
 
 //4th Problem - Find mega friend name
@@ -79,5 +79,5 @@ function megaFriend(names) {
     return names[position];
 }
 var names = ["Anik", "Mahmudul", "Mushfiqa", "Sakib", "Riyad", "Robin"];
-var f = megaFriend(names);
-console.log(f);
+var biggestName = megaFriend(names);
+console.log(biggestName);
