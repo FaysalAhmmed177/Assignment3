@@ -36,45 +36,48 @@ var cost = budgetCalculator(0, 2, 5);
 console.log(cost);
 
 //3rd Problem - Hotel Cost calculator
-function hotelCost(days){
-var cost = 0;
-if( days <0 ){
-    return "Negative days isn't possible.Please try with positive number."
+function hotelCost(days) {
+    var cost = 0;
+    if (days < 0) {
+        return "Negative days isn't possible.Please try with positive number."
     }
 
-if( days <= 10 ){
-cost = days * 100;
-}
-else if( days <=20 ){
-    var firstPart= 10 * 100;
-    var remaining = days - 10;
-    var secondPart = remaining * 80;
-    cost = firstPart + secondPart;
-}
-else{
-    var firstPart = 10 * 100;
-    var secondPart = 10 * 80;
-    var remaining = days - 20;
-    var thirdPart = remaining * 50;
-    cost = firstPart + secondPart + thirdPart;
-}
-return cost;
+    if (days <= 10) {
+        cost = days * 100;
+    }
+    else if (days <= 20) {
+        var firstPart = 10 * 100;
+        var remaining = days - 10;
+        var secondPart = remaining * 80;
+        cost = firstPart + secondPart;
+    }
+    else {
+        var firstPart = 10 * 100;
+        var secondPart = 10 * 80;
+        var remaining = days - 20;
+        var thirdPart = remaining * 50;
+        cost = firstPart + secondPart + thirdPart;
+    }
+    return cost;
 }
 var hotel = hotelCost(-1);
 console.log(hotel);
 
 //4th Problem - Find mega friend name
-function megaFriend(names){
+function megaFriend(names) {
     var elementLength = names[0].length;
-    for(var i = 1; i<names.length; i++){
-        
+    var position = 0
+    for (var i = 1; i < names.length; i++) {
 
-        if(elementLength < names[i].length){
+
+        if (elementLength < names[i].length) {
             elementLength = names[i].length;
+            position = i;
         }
     }
-return elementLength;
+
+    return names[position];
 }
-var names = ["Anik","Mahmudul","Mushfiq","Sakib","Riyad","Robin"];
+var names = ["Anik", "Mahmudul", "Mushfiqa", "Sakib", "Riyad", "Robin"];
 var f = megaFriend(names);
 console.log(f);
